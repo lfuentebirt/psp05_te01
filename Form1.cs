@@ -412,9 +412,10 @@ namespace PSP05_TE_GestorPass
                     datosUsuario = new DatosUsuario();
                     datosUsuario.datosContrasenas = new List<DatosContrasena>();
 
-                    cbBorrarDesc.Items.Clear();
-                    cbVisualizarDesc.Items.Clear();
                 }
+
+                cbBorrarDesc.Items.Clear();
+                cbVisualizarDesc.Items.Clear();
             }
             else
             { // retroaliimentación - indicamos si ya existe una contraseña con esa descripcion
@@ -592,6 +593,11 @@ namespace PSP05_TE_GestorPass
                     cbBorrarDesc.Items.Clear();
                     cbBorrarDesc.Items.Add("No hay nada para mostrar");
                     cbBorrarDesc.SelectedIndex = 0;
+
+                    tbContrasenaDescif.Text = String.Empty;
+                    lbUbicacion.Text = String.Empty;
+                    tbRegistrarContrasena.Text = String.Empty;
+                    tbRegistrarDesc.Text = String.Empty;
                 }
 
                 // borramos del objeto de los datosUsuario
